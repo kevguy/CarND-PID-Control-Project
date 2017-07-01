@@ -19,7 +19,7 @@ void PID::Init(double Kp, double Ki, double Kd) {
     p_error = d_error = i_error = 0.0;
 
     // Twiddling parameters
-    is_do_twiddle = false;
+    is_do_twiddle = true;
     dp = {0.1*Kp, 0.1*Kd, 0.1*Ki};
     step = 1;
     param_idx = 2; // this will wrap back to 0 after the first twiddle loop
